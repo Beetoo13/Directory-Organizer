@@ -1,0 +1,11 @@
+# Files directories
+source_dir = ""
+downloaded_images_folder = source_dir + "\\Downloaded Images"
+downloaded_compressed_files_folder = source_dir + "\\Downloaded Zips"
+downloaded_music_folder = source_dir + "\\Downloaded Music"
+downloaded_videos_folder = source_dir + "\\Downloaded Videos"
+downloaded_documents_folder = source_dir + "\\Downloaded Documents"
+downloaded_design_files_folder = source_dir + "\\Downloaded Design Files"
+downloaded_programming_files_folder = source_dir + "\\Downloaded Programming Files"
+downloaded_font_files_folder = source_dir + "\\Downloaded Font Files"
+downloaded_executable_files_folder = source_dir + "\\Downloaded Executable Files"
