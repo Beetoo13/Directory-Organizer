@@ -6,7 +6,7 @@ from tkinter import messagebox
 def main():
     input_path = input("Enter the path of the directory you wanna organize: ")
     source_dir = input_path
-    with os.scandir(source_dir) as entries:
+    with os.scandir(source_dir.strip()) as entries:
         for entry in entries:
             if os.path.isfile(entry):
                 check_for_image_files(entry, source_dir)
