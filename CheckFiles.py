@@ -6,14 +6,14 @@ from FilesTypes import *
 
 
 def move_files(entry, source_dir, move_path):
-    if os.path.exists(source_dir + move_path):
-        shutil.move(source_dir + "\\" + entry.name,
-                    source_dir + move_path + "\\" + entry.name)
-    else:
-        print(source_dir + move_path + "\\" + entry.name)
-        os.makedirs(source_dir + move_path)
-        shutil.move(source_dir + "\\" + entry.name,
-                    source_dir + move_path + "\\" + entry.name)
+    if not os.path.exists(source_dir + move_path + "\\" + entry.name):
+        if os.path.exists(source_dir + move_path):
+            shutil.move(source_dir + "\\" + entry.name,
+                        source_dir + move_path + "\\" + entry.name)
+        else:
+            os.makedirs(source_dir + move_path)
+            shutil.move(source_dir + "\\" + entry.name,
+                        source_dir + move_path + "\\" + entry.name)
 
 
 def check_for_image_files(entry, source_dir):

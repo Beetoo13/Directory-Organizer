@@ -14,9 +14,9 @@ design_types = [
 ]
 programming_types = [
     ".sql", ".xml", ".c", ".class", ".cpp", ".cs", ".java", ".php", ".py",
-    ".sh", ".json"
+    ".sh", ".json", ".whl"
 ]
 font_types = [".fnt", ".fon", ".otf", ".ttf"]
 executable_types = [
-    ".apk", ".bat", ".bin", ".com", ".exe", ".jar", ".msi", ".wsf"
+    ".apk", ".bat", ".bin", ".com", ".exe", ".jar", ".msi", ".wsf", ".iso"
 ]
