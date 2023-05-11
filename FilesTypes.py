@@ -6,7 +6,8 @@ music_types = [
 ]
 video_types = [".mp4", ".mov", ".wmv", ".avi", ".flv", ".webm", ".mpeg"]
 documents_types = [
-    ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".csv", ".pdf", ".txt"
+    ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".csv", ".pdf", ".txt",
+    ".log"
 ]
 design_types = [
     ".psd", ".ai", ".indd", ".prproj", ".nwd", ".dwg", ".dxf", ".model",
