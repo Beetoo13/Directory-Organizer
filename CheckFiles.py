@@ -4,16 +4,35 @@ import shutil
 from FoldersList import *
 from FilesTypes import *
 
+# def move_files(entry, source_dir, move_path):
+#     if not os.path.exists(source_dir + move_path + "\\" + entry.name):
+#         if os.path.exists(source_dir + move_path):
+#             shutil.move(source_dir + "\\" + entry.name,
+#                         source_dir + move_path + "\\" + entry.name)
+#         else:
+#             os.makedirs(source_dir + move_path)
+#             shutil.move(source_dir + "\\" + entry.name,
+#                         source_dir + move_path + "\\" + entry.name)
+
 
 def move_files(entry, source_dir, move_path):
-    if not os.path.exists(source_dir + move_path + "\\" + entry.name):
-        if os.path.exists(source_dir + move_path):
-            shutil.move(source_dir + "\\" + entry.name,
-                        source_dir + move_path + "\\" + entry.name)
-        else:
-            os.makedirs(source_dir + move_path)
-            shutil.move(source_dir + "\\" + entry.name,
-                        source_dir + move_path + "\\" + entry.name)
+    destination_folder = os.path.join(source_dir, move_path)
+    if not os.path.exists(destination_folder):
+        os.makedirs(destination_folder)
+
+    # Separar el nombre base y la extensión del archivo
+    base_name, extension = os.path.splitext(entry.name)
+
+    # Construir un nuevo nombre único
+    new_name = entry.name
+    counter = 1
+    while os.path.exists(os.path.join(destination_folder, new_name)):
+        new_name = f"{base_name} ({counter}){extension}"
+        counter += 1
+
+    # Renombrar el archivo original con el nuevo nombre único y luego moverlo
+    new_path = os.path.join(destination_folder, new_name)
+    os.rename(os.path.join(source_dir, entry.name), new_path)
 
 
 def check_for_image_files(entry, source_dir):

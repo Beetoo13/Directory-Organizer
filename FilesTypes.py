@@ -1,5 +1,7 @@
 # Lists of files types
-image_types = [".jpeg", ".jpg", ".gif", ".png", ".bmp", ".ico", ".jfif"]
+image_types = [
+    ".jpeg", ".jpg", ".gif", ".png", ".bmp", ".ico", ".jfif", ".webp"
+]
 compressed_types = [".zip", ".rar", ".7z", ".deb", ".pkg", ".tar.gz", ".z"]
 music_types = [
     ".wav", ".aiff", ".mp3", ".aac", ".ogg", ".wma", ".flac", ".alac"
@@ -17,7 +19,7 @@ programming_types = [
     ".sql", ".xml", ".c", ".class", ".cpp", ".cs", ".java", ".php", ".py",
     ".sh", ".json", ".whl"
 ]
-font_types = [".fnt", ".fon", ".otf", ".ttf"]
+font_types = [".fnt", ".fon", ".oft", ".ttf"]
 executable_types = [
     ".apk", ".bat", ".bin", ".com", ".exe", ".jar", ".msi", ".wsf", ".iso"
 ]
